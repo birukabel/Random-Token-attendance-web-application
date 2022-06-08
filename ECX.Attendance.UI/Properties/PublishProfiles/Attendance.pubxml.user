@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\Biruk\AttendancePublished</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Admin.aspx">
+      <publishTime>01/26/2021 11:06:35</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>08/10/2016 01:32:23</publishTime>
+    </File>
+    <File Include="bin/ECX.Attendance.BE.dll">
+      <publishTime>03/08/2021 11:51:01</publishTime>
+    </File>
+    <File Include="bin/ECX.Attendance.BLL.dll">
+      <publishTime>03/08/2021 11:51:01</publishTime>
+    </File>
+    <File Include="bin/ECX.Attendance.DAL.dll">
+      <publishTime>03/08/2021 11:51:01</publishTime>
+    </File>
+    <File Include="bin/ECX.Attendance.UI.dll">
+      <publishTime>03/08/2021 11:59:11</publishTime>
+    </File>
+    <File Include="bin/ECX.Attendance.UI.XmlSerializers.dll">
+      <publishTime>03/08/2021 11:59:11</publishTime>
+    </File>
+    <File Include="Home.aspx">
+      <publishTime>03/05/2021 10:09:22</publishTime>
+    </File>
+    <File Include="Images/logo.gif">
+      <publishTime>11/24/2020 09:00:20</publishTime>
+    </File>
+    <File Include="Images/TopBack.gif">
+      <publishTime>11/24/2020 09:00:20</publishTime>
+    </File>
+    <File Include="Images/yellowbg1.gif">
+      <publishTime>11/24/2020 09:00:20</publishTime>
+    </File>
+    <File Include="LogIn.aspx">
+      <publishTime>11/25/2020 17:25:09</publishTime>
+    </File>
+    <File Include="ManualAttendance.aspx">
+      <publishTime>02/12/2021 11:20:03</publishTime>
+    </File>
+    <File Include="mMenu.master">
+      <publishTime>03/04/2021 12:01:19</publishTime>
+    </File>
+    <File Include="mTop.Master">
+      <publishTime>01/26/2021 16:16:47</publishTime>
+    </File>
+    <File Include="Reports/AttendanceReport.aspx">
+      <publishTime>01/12/2021 10:56:50</publishTime>
+    </File>
+    <File Include="Reports/NotWorkingWorkStationsReport.aspx">
+      <publishTime>01/26/2021 10:20:50</publishTime>
+    </File>
+    <File Include="Reports/RepAssignedWorkStations.aspx">
+      <publishTime>03/05/2021 18:46:49</publishTime>
+    </File>
+    <File Include="Reports/SellerBuyerReport.aspx">
+      <publishTime>01/12/2021 15:47:18</publishTime>
+    </File>
+    <File Include="StagingECXTradeDataSet.xsc">
+      <publishTime>03/04/2021 10:45:07</publishTime>
+    </File>
+    <File Include="StagingECXTradeDataSet.xss">
+      <publishTime>03/04/2021 10:45:07</publishTime>
+    </File>
+    <File Include="Web References/ECXSecurityAccess/AuthenticationStatus.datasource">
+      <publishTime>11/25/2020 17:33:37</publishTime>
+    </File>
+    <File Include="Web References/ECXSecurityAccess/CApplication.datasource">
+      <publishTime>11/25/2020 17:33:37</publishTime>
+    </File>
+    <File Include="Web References/ECXSecurityAccess/OUser.datasource">
+      <publishTime>11/25/2020 17:33:37</publishTime>
+    </File>
+    <File Include="Web References/ECXSecurityAccess/Reference.map">
+      <publishTime>11/25/2020 17:33:35</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/08/2021 11:51:03</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

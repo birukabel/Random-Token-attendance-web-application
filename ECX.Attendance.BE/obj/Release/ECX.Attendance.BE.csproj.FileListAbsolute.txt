@@ -1,0 +1,4 @@
+E:\Biruk\ECXAttendance\ECX.Attendance.BE\bin\Release\ECX.Attendance.BE.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.BE\bin\Release\ECX.Attendance.BE.pdb
+E:\Biruk\ECXAttendance\ECX.Attendance.BE\obj\Release\ECX.Attendance.BE.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.BE\obj\Release\ECX.Attendance.BE.pdb

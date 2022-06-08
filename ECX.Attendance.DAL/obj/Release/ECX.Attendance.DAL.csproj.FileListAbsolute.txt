@@ -1,0 +1,7 @@
+E:\Biruk\ECXAttendance\ECX.Attendance.DAL\bin\Release\ECX.Attendance.DAL.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.DAL\bin\Release\ECX.Attendance.DAL.pdb
+E:\Biruk\ECXAttendance\ECX.Attendance.DAL\bin\Release\ECX.Attendance.BE.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.DAL\bin\Release\ECX.Attendance.BE.pdb
+E:\Biruk\ECXAttendance\ECX.Attendance.DAL\obj\Release\ECX.Attendance.DAL.csprojResolveAssemblyReference.cache
+E:\Biruk\ECXAttendance\ECX.Attendance.DAL\obj\Release\ECX.Attendance.DAL.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.DAL\obj\Release\ECX.Attendance.DAL.pdb

@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/mTop.Master" AutoEventWireup="true" CodeBehind="mMenu.master.cs" Inherits="ECX.Attendance.UI.mMenu" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+    <table width="100%">
+        <tr>
+            <td valign="top" style="width: 25%; border-right: solid 1px black; height: 750px;">
+                <table width="100%" style="font-size: small;">
+                    <tr>
+                        <td align="center" style="background-color: #adba83; font-size: large;">Menu
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="background-image: url('<%= MenuBackPath %>'); background-repeat: repeat-y;">
+                            <%--<asp:LinkButton ID="lblRandomAttendance" runat="server" CausesValidation="false" PostBackUrl="~/Home.aspx">Randomization Attendance</asp:LinkButton><br />--%>
+                            <asp:LinkButton ID="LinkButton4" runat="server" CausesValidation="false" PostBackUrl="~/RandomAttendance.aspx">Randomization Attendance New</asp:LinkButton><br /> 
+                            <asp:LinkButton ID="lblManualAttendance" runat="server" CausesValidation="false" PostBackUrl="~/ManualAttendance.aspx">Manual Attendance</asp:LinkButton><br />
+                            <asp:LinkButton ID="lblAdmin" runat="server" CausesValidation="false" PostBackUrl="~/Admin.aspx">Work Satation Setting</asp:LinkButton><br />
+                            <asp:LinkButton ID="lblNoReps" runat="server" CausesValidation="false" PostBackUrl="~/NoOfRepSetting.aspx">No Of Reps Setting</asp:LinkButton><br />
+                        <asp:LinkButton ID="lblRegionalNMDT" runat="server" CausesValidation="false" PostBackUrl="~/RegionalNMDT.aspx">Regional NMDT Registration</asp:LinkButton>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" style="background-color: #adba83; font-size: large;">Reports
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" style="background-image: url('<%= MenuBackPath %>'); background-repeat: repeat-y;">
+                            <asp:LinkButton ID="lnkReport" runat="server" CausesValidation="false" PostBackUrl="~/Reports/AttendanceReport.aspx">Attendance Report</asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="false" PostBackUrl="~/Reports/SellerBuyerReport.aspx">Seller/Buyer Per Session</asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="false" PostBackUrl="~/Reports/NotWorkingWorkStationsReport.aspx">Not Working Work Station Report</asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButton3" runat="server" CausesValidation="false" PostBackUrl="~/Reports/RepAssignedWorkStations.aspx">Assigned Token Report </asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButton5" runat="server" CausesValidation="false" PostBackUrl="~/Reports/ReconcileReport.aspx">Reconcile Report </asp:LinkButton><br />
+                            <asp:LinkButton ID="LinkButton6" runat="server" CausesValidation="false" PostBackUrl="~/Reports/RegionalNMDTReport.aspx">Regional NMDT Report </asp:LinkButton><br />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td align="left" valign="top" style="width: 80%; font-size: small;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

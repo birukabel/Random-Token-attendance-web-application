@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetActiveApplications">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetActiveApplicationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveApplicationsResult" type="tns:ArrayOfCApplication" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCApplication">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CApplication" nillable="true" type="tns:CApplication" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CApplication">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UniqueIdentifier" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HasRight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasRightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="HasRightResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HasRights">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="HasRightsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HasRightsResult" type="tns:ArrayOfFloat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFloat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="float" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UserHasApplicationAccess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserHasApplicationAccessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserHasApplicationAccessResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserHasApplicationsAccess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationCode" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserHasApplicationsAccessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserHasApplicationsAccessResult" type="tns:ArrayOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBoolean">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="boolean" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddAuditTrail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModuleCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAuditTrailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddAuditTrailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAuditTrails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuditTrialList" type="tns:ArrayOfCAuditTrial" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCAuditTrial">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CAuditTrial" nillable="true" type="tns:CAuditTrial" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CAuditTrial">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ModuleCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="OldValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddAuditTrailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddAuditTrailsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuditTrailCommit">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuditTrailCommitResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuditTrailRollback">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuditTrailRollbackResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsAuthenticated">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ApplicationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAuthenticatedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsAuthenticatedResult" type="tns:AuthenticationStatus" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="AuthenticationStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="AccessGranted" />
+          <s:enumeration value="NoApplicationAccess" />
+          <s:enumeration value="InvalidUserOrPassword" />
+          <s:enumeration value="UnknownError" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UserHasLocationAccess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserHasLocationAccessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UserHasLocationAccessResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsersWithRight">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LocationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UsersWithRightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UsersWithRightResult" type="tns:ArrayOfOUser" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OUser" nillable="true" type="tns:OUser" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OUser">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetActiveApplicationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveApplications" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveApplicationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveApplicationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="HasRightSoapIn">
+    <wsdl:part name="parameters" element="tns:HasRight" />
+  </wsdl:message>
+  <wsdl:message name="HasRightSoapOut">
+    <wsdl:part name="parameters" element="tns:HasRightResponse" />
+  </wsdl:message>
+  <wsdl:message name="HasRightsSoapIn">
+    <wsdl:part name="parameters" element="tns:HasRights" />
+  </wsdl:message>
+  <wsdl:message name="HasRightsSoapOut">
+    <wsdl:part name="parameters" element="tns:HasRightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserHasApplicationAccessSoapIn">
+    <wsdl:part name="parameters" element="tns:UserHasApplicationAccess" />
+  </wsdl:message>
+  <wsdl:message name="UserHasApplicationAccessSoapOut">
+    <wsdl:part name="parameters" element="tns:UserHasApplicationAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserHasApplicationsAccessSoapIn">
+    <wsdl:part name="parameters" element="tns:UserHasApplicationsAccess" />
+  </wsdl:message>
+  <wsdl:message name="UserHasApplicationsAccessSoapOut">
+    <wsdl:part name="parameters" element="tns:UserHasApplicationsAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAuditTrailSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAuditTrail" />
+  </wsdl:message>
+  <wsdl:message name="AddAuditTrailSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAuditTrailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAuditTrailsSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAuditTrails" />
+  </wsdl:message>
+  <wsdl:message name="AddAuditTrailsSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAuditTrailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditTrailCommitSoapIn">
+    <wsdl:part name="parameters" element="tns:AuditTrailCommit" />
+  </wsdl:message>
+  <wsdl:message name="AuditTrailCommitSoapOut">
+    <wsdl:part name="parameters" element="tns:AuditTrailCommitResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuditTrailRollbackSoapIn">
+    <wsdl:part name="parameters" element="tns:AuditTrailRollback" />
+  </wsdl:message>
+  <wsdl:message name="AuditTrailRollbackSoapOut">
+    <wsdl:part name="parameters" element="tns:AuditTrailRollbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsAuthenticatedSoapIn">
+    <wsdl:part name="parameters" element="tns:IsAuthenticated" />
+  </wsdl:message>
+  <wsdl:message name="IsAuthenticatedSoapOut">
+    <wsdl:part name="parameters" element="tns:IsAuthenticatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserHasLocationAccessSoapIn">
+    <wsdl:part name="parameters" element="tns:UserHasLocationAccess" />
+  </wsdl:message>
+  <wsdl:message name="UserHasLocationAccessSoapOut">
+    <wsdl:part name="parameters" element="tns:UserHasLocationAccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsersWithRightSoapIn">
+    <wsdl:part name="parameters" element="tns:UsersWithRight" />
+  </wsdl:message>
+  <wsdl:message name="UsersWithRightSoapOut">
+    <wsdl:part name="parameters" element="tns:UsersWithRightResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserName" />
+  </wsdl:message>
+  <wsdl:message name="GetUserNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ECXSecurityAccessSoap">
+    <wsdl:operation name="GetActiveApplications">
+      <wsdl:input message="tns:GetActiveApplicationsSoapIn" />
+      <wsdl:output message="tns:GetActiveApplicationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasRight">
+      <wsdl:input message="tns:HasRightSoapIn" />
+      <wsdl:output message="tns:HasRightSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HasRights">
+      <wsdl:input message="tns:HasRightsSoapIn" />
+      <wsdl:output message="tns:HasRightsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserHasApplicationAccess">
+      <wsdl:input message="tns:UserHasApplicationAccessSoapIn" />
+      <wsdl:output message="tns:UserHasApplicationAccessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserHasApplicationsAccess">
+      <wsdl:input message="tns:UserHasApplicationsAccessSoapIn" />
+      <wsdl:output message="tns:UserHasApplicationsAccessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAuditTrail">
+      <wsdl:input message="tns:AddAuditTrailSoapIn" />
+      <wsdl:output message="tns:AddAuditTrailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAuditTrails">
+      <wsdl:input message="tns:AddAuditTrailsSoapIn" />
+      <wsdl:output message="tns:AddAuditTrailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTrailCommit">
+      <wsdl:input message="tns:AuditTrailCommitSoapIn" />
+      <wsdl:output message="tns:AuditTrailCommitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuditTrailRollback">
+      <wsdl:input message="tns:AuditTrailRollbackSoapIn" />
+      <wsdl:output message="tns:AuditTrailRollbackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticated">
+      <wsdl:input message="tns:IsAuthenticatedSoapIn" />
+      <wsdl:output message="tns:IsAuthenticatedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserHasLocationAccess">
+      <wsdl:input message="tns:UserHasLocationAccessSoapIn" />
+      <wsdl:output message="tns:UserHasLocationAccessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsersWithRight">
+      <wsdl:input message="tns:UsersWithRightSoapIn" />
+      <wsdl:output message="tns:UsersWithRightSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <wsdl:input message="tns:GetUserNameSoapIn" />
+      <wsdl:output message="tns:GetUserNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ECXSecurityAccessSoap" type="tns:ECXSecurityAccessSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActiveApplications">
+      <soap:operation soapAction="http://tempuri.org/GetActiveApplications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasRight">
+      <soap:operation soapAction="http://tempuri.org/HasRight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasRights">
+      <soap:operation soapAction="http://tempuri.org/HasRights" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserHasApplicationAccess">
+      <soap:operation soapAction="http://tempuri.org/UserHasApplicationAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserHasApplicationsAccess">
+      <soap:operation soapAction="http://tempuri.org/UserHasApplicationsAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAuditTrail">
+      <soap:operation soapAction="http://tempuri.org/AddAuditTrail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAuditTrails">
+      <soap:operation soapAction="http://tempuri.org/AddAuditTrails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTrailCommit">
+      <soap:operation soapAction="http://tempuri.org/AuditTrailCommit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTrailRollback">
+      <soap:operation soapAction="http://tempuri.org/AuditTrailRollback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticated">
+      <soap:operation soapAction="http://tempuri.org/IsAuthenticated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserHasLocationAccess">
+      <soap:operation soapAction="http://tempuri.org/UserHasLocationAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsersWithRight">
+      <soap:operation soapAction="http://tempuri.org/UsersWithRight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap:operation soapAction="http://tempuri.org/GetUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ECXSecurityAccessSoap12" type="tns:ECXSecurityAccessSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActiveApplications">
+      <soap12:operation soapAction="http://tempuri.org/GetActiveApplications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasRight">
+      <soap12:operation soapAction="http://tempuri.org/HasRight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasRights">
+      <soap12:operation soapAction="http://tempuri.org/HasRights" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserHasApplicationAccess">
+      <soap12:operation soapAction="http://tempuri.org/UserHasApplicationAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserHasApplicationsAccess">
+      <soap12:operation soapAction="http://tempuri.org/UserHasApplicationsAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAuditTrail">
+      <soap12:operation soapAction="http://tempuri.org/AddAuditTrail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAuditTrails">
+      <soap12:operation soapAction="http://tempuri.org/AddAuditTrails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTrailCommit">
+      <soap12:operation soapAction="http://tempuri.org/AuditTrailCommit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuditTrailRollback">
+      <soap12:operation soapAction="http://tempuri.org/AuditTrailRollback" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticated">
+      <soap12:operation soapAction="http://tempuri.org/IsAuthenticated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserHasLocationAccess">
+      <soap12:operation soapAction="http://tempuri.org/UserHasLocationAccess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsersWithRight">
+      <soap12:operation soapAction="http://tempuri.org/UsersWithRight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserName">
+      <soap12:operation soapAction="http://tempuri.org/GetUserName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ECXSecurityAccess">
+    <wsdl:port name="ECXSecurityAccessSoap" binding="tns:ECXSecurityAccessSoap">
+      <soap:address location="http://10.1.5.20:5000/ECXSecurity/ECXSecurityAccess.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ECXSecurityAccessSoap12" binding="tns:ECXSecurityAccessSoap12">
+      <soap12:address location="http://10.1.5.20:5000/ECXSecurity/ECXSecurityAccess.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

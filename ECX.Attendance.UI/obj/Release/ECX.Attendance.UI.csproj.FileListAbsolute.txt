@@ -1,0 +1,16 @@
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.UI.dll.config
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.UI.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.UI.XmlSerializers.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.UI.pdb
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.BE.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.BLL.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.DAL.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.BE.pdb
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.BLL.pdb
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\bin\ECX.Attendance.DAL.pdb
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\obj\Release\ECX.Attendance.UI.csprojResolveAssemblyReference.cache
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\obj\Release\RdlCompile.cache
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\obj\Release\RdlCompile.compiled
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\obj\Release\ECX.Attendance.UI.dll
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\obj\Release\ECX.Attendance.UI.pdb
+E:\Biruk\ECXAttendance\ECX.Attendance.UI\obj\Release\ECX.Attendance.UI.XmlSerializers.dll
